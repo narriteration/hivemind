@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   #TODO: figure out '/profile' (kashif used 'mix')
 
+  root :to => "pages#index"
   get '/pages/:page' => 'pages#show'
+  get '/pages/home' => 'pages#index'
 
   # Sessions
   get '/login' => 'sessions#new'
