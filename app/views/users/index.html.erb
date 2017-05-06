@@ -1,0 +1,19 @@
+<h1>All Users Signed Up for Hivemind</h1>
+
+<% @users.each do |user| %>
+<hr>
+  <br>
+  <%= user.name %>
+  <br>
+  <%= user.email %>
+  <br>
+  <%= user.phone %>
+  <br>
+  <%= user.city %>
+  <br>
+  <%= user.state %>
+  <br>
+  Total # contacts created: <%= user.contacts.count %>
+  <br>
+<hr>
+<% end %>

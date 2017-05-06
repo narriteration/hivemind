@@ -1,0 +1,19 @@
+<h1>All Contacts Created Through Hivemind Users</h1>
+
+<% @contacts.each do |contact| %>
+<hr>
+  <br>
+  <%= contact.first_name %> <%= contact.last_name %>
+  <br>
+  <%= contact.nickname %>
+  <br>
+  <%= contact.phone %>
+  <br>
+  <%= contact.city %>
+  <br>
+  <%= contact.state %>
+  <br>
+  Approved to recieve messages through Twilio: <%= contact.approved %>
+  <br>
+<hr>
+<% end %>
