@@ -15,3 +15,53 @@
  *= require normalize
  *= require skeleton
  */
+
+
+ .main-navigation {
+	width: 100%;
+	float: left;
+	margin: 0 0 3em 0;
+	padding: 0;
+  background-color: #36384C;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+	list-style: none;
+}
+
+/*.main-navigation li {
+	float: right; }*/
+/* TODO: why does adding FLOAT break link function? */
+
+.main-navigation li a {
+  		display: block;
+  		padding: 8px 15px;
+  		text-decoration: none;
+  		font-weight: bold;
+  		color: #fff;
+      font-weight: 100;
+      letter-spacing: .1em;
+  		border-right: 1px solid #ccc;
+}
+
+.form-centered {
+  text-align: center;
+}
+
+.column,
+.columns {
+   width: 100%;
+}
+
+.main-navigation li {
+  display: inline-block;
+}
+
+body {
+background-color: #fff;
+color: #36384C;
+}
+
+h2, h3, h4, h5, h6, p, a, span, ol, ul {
+  letter-spacing: .05em;
+  color: #aaa;
+}

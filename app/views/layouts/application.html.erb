@@ -9,6 +9,22 @@
   </head>
 
   <body>
+
+    <!-- NAVBAR -->
+    <nav class="navigation">
+      <a href="#" class="menu-icon">
+        <i class="fa fa-bars"></i>
+      </a>
+      <ul class="main-navigation">
+        <li class="navbar-item"><%= link_to "home", root_path %></li>
+        <li class="navbar-item"><%= link_to "sign up", signup_path %></li>
+        <li class="navbar-item"><%= link_to "log in", login_path %></li>
+        <li class="navbar-item"><a href="/pages/about">about</a></li> <%# TODO: change to link_to %>
+        <li class="navbar-item"><%= link_to "profile" %></li> <%# TODO: add profile link_to here %>
+        <li class="navbar-item"><%= link_to "text!", texts_new_path %></li>
+      </ul>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

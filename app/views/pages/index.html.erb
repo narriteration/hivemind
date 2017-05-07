@@ -1,10 +1,46 @@
-<h1>hivemind</h1>
-<h3>Help your friends help you.</h3>
+<section id="hero" class= "hero u-full-width">
+  <div class="hero-image"></div>
+    <div class="container welcome-about">
+      <div class="row">
+        <div class="offset-by-one ten columns">
+          <div class="hero-heading">
+            <h1>hivemind</h1>
+            <h3>help your friends help you.</h3>
+            <p>Feeling twisty inside and know you need help from that one person?
+              Hivemind helps you put words to that twisty feeling.
+              Use our build-a-text magic wizard to untwist your tongue and formulate a clear, simple request for help.
+              You are great, and your best people agree.
+              Help them help you.
+            </p>
+          </div>
+          <a class="button button-primary" href="https://sleepy-shore-29580.herokuapp.com/signup">Try hivemind</a>
+          <br>
+          <br>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<p>Feeling twisty inside and know you need help from that one person?
-  Hivemind helps you put words to that twisty feeling.
-  Use our build-a-text magic wizard to untwist your tongue and formulate a clear, simple request for help.
-  You are great, and your best people agree.
-  Help them help you.
-  <3
-  </p>
+  <section id="introduction" class="introduction u-full-width">
+    <div class="container">
+      <div class="row">
+        <h3>how it works</h3>
+        <div class="one-third columns">
+          <img class="png-hex" src="Hexagon.png">
+          <h5 class="introduction-heading"><%= link_to "sign up", signup_path %></h5>
+          <p class="introduction-description">Sign up with your name, email.</p>
+        </div>
+        <div class="one-third columns">
+          <img class="png-hex" src="Hexagon.png">
+          <h5 class="introduction-heading"><%= link_to "add contacts", contacts_new_path %></h5>
+          <p class="introduction-description">Start adding your favorite people. You know who they are.</p>
+        </div>
+        <div class="one-third columns">
+          <img class="png-hex" src="Hexagon.png">
+          <h5 class="introduction-heading"><%= link_to "build and send that text!", texts_new_path %></h5>
+          <p class="introduction-description">We'll help sort out your full request for help: from what that twisty feeling is, all the way to what you need (and when!) from your support network.</p>
+        </div>
+      </div>
+    </div>
+  </hero>

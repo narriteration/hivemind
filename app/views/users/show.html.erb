@@ -1,0 +1,15 @@
+<h1>Profile</h1>
+
+<div class="profile-info">
+  <%= @user.name %> <br>
+  <%= @user.email %> <br>
+  <%= @user.city %>, <%= @user.state %>
+</div>
+
+<div class="profile-contacts">
+ <h5><%= link_to "Contacts", contacts_path %></h5> <%# TODO: review route and determin how to nest properly; use weeme as reference %>
+</div>
+
+<div class="profile-texts">
+<h5><%= link_to "Texts" %></h5> <%# TODO: add texts path for THAT user %>
+</div>

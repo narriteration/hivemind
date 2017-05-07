@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get '/users' => 'users#index'
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
+  get '/users/:id' => 'users#show'
 
   # Texts
   get '/texts' => 'texts#index' #?
