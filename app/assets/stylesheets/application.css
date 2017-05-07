@@ -30,8 +30,12 @@
 }
 
 /*.main-navigation li {
-	float: right; }*/
-/* TODO: why does adding FLOAT break link function? */
+	float: right;
+  display: inline-block;
+
+   }*/
+/* TODO: why does adding FLOAT break link function?
+Answer: the main div with content below (in page) prevents the a tag from being clickable */
 
 .main-navigation li a {
   		display: block;
@@ -51,10 +55,6 @@
 .column,
 .columns {
    width: 100%;
-}
-
-.main-navigation li {
-  display: inline-block;
 }
 
 body {

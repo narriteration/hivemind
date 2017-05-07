@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :contacts
   #TODO: figure out '/profile' (kashif used 'mix')
 
   root :to => "pages#index"

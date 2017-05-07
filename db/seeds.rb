@@ -46,75 +46,89 @@ User.create([
     }
 ])
 
-p "USERS created: #{User.count}"
+p "GA-specific USERS created: #{User.count}"
+
+
+ffaker_users_data = []
+10.times do
+  name = FFaker::Name.name
+  phone = "+1" + FFaker::PhoneNumber.short_phone_number.to_s.delete!('-')
+  ffaker_users_data << {
+    name: name,
+    email: "#{name}@example.com".downcase,
+    phone: phone,
+    password_digest: FFaker::Internet.password,
+    city: FFaker::AddressUS.city,
+    state: FFaker::AddressUS.state_abbr
+  }
+end
+
+users = User.create(ffaker_users_data)
 
 
 ##############################################################
 
-
-Contact.destroy_all
-p "CONTACT records destroyed"
-
-Contact.create([
-  {
-    first_name: "Emily",
-    last_name: "Smizer",
-    nickname: "Smize",
-    phone: "+16176970979",
-    city: "Berkeley",
-    state: "CA",
-    user_id: 5,
-    approved: false
-  },
-  {
-    first_name: "Georgia",
-    last_name: "Faulkner",
-    nickname: "Geeg",
-    phone: "+15306133269",
-    city: "Oakland",
-    state: "CA",
-    user_id: 5,
-    approved: false
-  },
-  {
-    first_name: "Rafa",
-    last_name: "Sanchez-Cruz",
-    nickname: "Ralf",
-    phone: "+12096798407",
-    city: "Washington",
-    state: "District of Columbia",
-    user_id: 5,
-    approved: false
-  },
-  {
-    first_name: "Chloe",
-    last_name: "Wilder",
-    nickname: "Chloe",
-    phone: "+14085960370",
-    city: "Oakland",
-    state: "CA",
-    user_id: 5,
-    approved: false
-  }
-])
-
-p "Real CONTACTS for seeded chelsea profile created: #{Contact.count}"
-
-
-# contacts_data = []
 #
-# 30.times do
-#   contacts_data << {
-#     first_name: FFaker::Name.first_name,
-#     last_name: FFaker::Name.last_name,
-#     nickname: FFaker::BaconIpsum.word,
-#     phone: "+15555555555",
-#     city: FFaker::AddressUS.city,
-#     state: FFaker::AddressUS.state_abbr,
-#     approved: FFaker::Boolean.maybe
+# Contact.destroy_all
+# p "CONTACT records destroyed"
+#
+# Contact.create([
+#   {
+#     first_name: "Emily",
+#     last_name: "Smizer",
+#     nickname: "Smize",
+#     phone: "+16176970979",
+#     city: "Berkeley",
+#     state: "CA",
+#     user_id: 5,
+#     approved: false
+#   },
+#   {
+#     first_name: "Georgia",
+#     last_name: "Faulkner",
+#     nickname: "Geeg",
+#     phone: "+15306133269",
+#     city: "Oakland",
+#     state: "CA",
+#     user_id: 5,
+#     approved: false
+#   },
+#   {
+#     first_name: "Rafa",
+#     last_name: "Sanchez-Cruz",
+#     nickname: "Ralf",
+#     phone: "+12096798407",
+#     city: "Washington",
+#     state: "District of Columbia",
+#     user_id: 5,
+#     approved: false
+#   },
+#   {
+#     first_name: "Chloe",
+#     last_name: "Wilder",
+#     nickname: "Chloe",
+#     phone: "+14085960370",
+#     city: "Oakland",
+#     state: "CA",
+#     user_id: 5,
+#     approved: false
 #   }
-# end
+# ])
 #
-# contacts = Contact.create(contacts_data)
-#
-# p "Created #{contacts.count} contacts"
+# p "Real CONTACTS for seeded chelsea profile created: #{Contact.count}"
+
+
+contact_data = []
+
+60.times do
+  contact_data = {
+    name: FFaker::Name.name,
+    phone: "+1" + FFaker::PhoneNumber.short_phone_number.to_s.delete!('-')
+  }
+
+contact = Contact.create(contact_data)
+users.sample.contacts << contact
+
+end
+
+p "Created #{Contact.count} contacts"

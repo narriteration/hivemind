@@ -8,13 +8,8 @@
 
             <%= form_for :contact, url: '/contacts' do |f| %>
 
-              First Name*: <%= f.text_field :first_name %><br>
-              Last Name*: <%= f.text_field :last_name %><br>
-              Nickname: <%= f.text_field :nickname %><br>
+              Name*: <%= f.text_field :name %><br>
               Phone: <%= f.text_field :phone %><br>
-              Email*: <%= f.text_field :email %><br>
-              City: <%= f.text_field :city %><br>
-              State: <%= f.text_field :state %><br>
               <%= f.submit "Submit", :class => 'button button-primary' %>
 
             <% end %>
