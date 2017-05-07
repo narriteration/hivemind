@@ -17,6 +17,10 @@
  *= require font-awesome
  */
 
+.hexagon-about {
+  height: 5em;
+  width:auto;
+}
 
  .main-navigation {
 	width: 100%;
