@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
 
   def authorize
     redirect_to '/login' unless current_user
+    #TODO: add notice to tell user they must be logged in before continuing
   end
-  
+
 end
