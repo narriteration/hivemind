@@ -59,4 +59,7 @@ Rails.application.routes.draw do
   # TODO: create admin auth
   # TODO: add marked routes to admin only, so users may not see
 
+  #error handling for pages that do not exist
+  get "*path" => 'pages#not_found'
+
 end
