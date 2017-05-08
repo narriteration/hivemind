@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :texts
   resources :contacts
-  
+
   root :to => "pages#home"
 
   # Pages
@@ -15,19 +16,19 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   # Users
-  get '/users' => 'users#index', as: 'users'
+  get '/users' => 'users#index', as: 'users' #ADMIN
   get '/signup' => 'users#new', as: 'signup'
   post '/users' => 'users#create'
-  get '/users/:id' => 'users#show', as: 'user'
+  # get '/users/:id' => 'users#show', as: 'user'
   get '/users/:id/edit' => 'users#edit', as: 'users_edit'
   patch '/users/:id' => 'users#update'
   delete '/users' => 'users#destroy'
 
   # Texts
-  get '/texts' => 'texts#index', as: 'texts'
-  get '/texts/new' => 'texts#new', as: 'texts_new'
-  post '/texts' => 'texts#create'
-  get '/texts/:id' => 'texts#show', as: 'text'
+  # get '/texts' => 'texts#index', as: 'texts'
+  # get '/texts/new' => 'texts#new', as: 'texts_new'
+  # post '/texts' => 'texts#create'
+  # get '/texts/:id' => 'texts#show', as: 'text'
 
   #TODO: choose how user should be able to go through form to create
   # text, but then also be able to edit that text.

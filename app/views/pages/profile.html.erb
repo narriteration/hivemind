@@ -29,10 +29,13 @@
             <div class="one-half columns">
               <%= image_tag "Hexagon.png", :class => "hexagon-about" %>
               <h5 class="introduction-heading"><%= link_to "Contacts", contacts_path %></h5>
+              <h5 class="introduction-heading"><%= link_to "Add Contact", contacts_new_path %></h5>
             </div>
             <div class="one-half columns">
               <%= image_tag "Hexagon.png", :class => "hexagon-about" %>
-              <h5 class="introduction-heading"><%= link_to "Texts", texts_path %></h5>
+              <h5 class="profile-actions"><%= link_to "Texts", texts_path %></h5>
+              <h5 class="profile-actions"><%= link_to "Build a Text", new_text_path %></h5>
+              <br>
               <hr>
             </div>
 

@@ -1,11 +1,25 @@
-<h1>All Contacts Created Through Hivemind Users</h1>
+<section id="hero" class= "hero u-full-width">
+  <div class="hero-image"></div>
+    <div class="container welcome-about">
+      <div class="row">
+        <div class="offset-by-one ten columns">
+          <div class="hero-heading">
+            <h1>My Contacts</h1>
 
-<% @contacts.each do |contact| %>
-<hr>
-  <br>
-  <%= contact.name %>
-  <br>
-  <%= contact.phone %>
-  <br>
-<hr>
-<% end %>
+            <% if current_user %>
+              <%= current_user.contacts.each do |contact| %>
+                <br>
+                <%= contact.name %>
+                <br>
+                <%= contact.phone %>
+                <br>
+                <hr>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%# TODO: fix naming of div classes %>
