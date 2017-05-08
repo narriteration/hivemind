@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
   resources :contacts
-  #TODO: figure out '/profile' (kashif used 'mix')
+  
+  root :to => "pages#home"
 
-  root :to => "pages#index"
-  get '/pages/:page' => 'pages#show'
-  get '/pages/home' => 'pages#index'
+  # Pages
+  get '/pages/home' => 'pages#home'
+  get '/pages/about' => 'pages#about'
+  get '/pages/profile' => 'pages#profile'
 
   # Sessions
   get '/login' => 'sessions#new'
@@ -13,16 +15,19 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   # Users
-  get '/users' => 'users#index'
-  get '/signup' => 'users#new'
+  get '/users' => 'users#index', as: 'users'
+  get '/signup' => 'users#new', as: 'signup'
   post '/users' => 'users#create'
-  get '/users/:id' => 'users#show'
+  get '/users/:id' => 'users#show', as: 'user'
+  get '/users/:id/edit' => 'users#edit', as: 'users_edit'
+  patch '/users/:id' => 'users#update'
+  delete '/users' => 'users#destroy'
 
   # Texts
-  get '/texts' => 'texts#index' #?
-  get '/texts/new' => 'texts#new' #User
-  post '/texts' => 'texts#create' #User
-  get '/texts/:id' => 'texts#show' #User
+  get '/texts' => 'texts#index', as: 'texts'
+  get '/texts/new' => 'texts#new', as: 'texts_new'
+  post '/texts' => 'texts#create'
+  get '/texts/:id' => 'texts#show', as: 'text'
 
   #TODO: choose how user should be able to go through form to create
   # text, but then also be able to edit that text.
@@ -34,22 +39,21 @@ Rails.application.routes.draw do
   # delete '/texts/:id' => 'texts#destroy'
 
   # Contacts
-  get '/contacts' => 'contacts#index' #User
-  get '/contacts/new' => 'contacts#new' #User
-  post '/contacts' => 'contacts#create' #User
-  get '/contacts/:id' => 'contacts#show' #?
-  get '/contacts/:id/edit' => 'contacts#edit' #User
-  patch '/contacts/:id' => 'contacts#update' #User
-  delete '/contacts/:id' => 'contacts#destroy' #User
-  # TODO: add line of code to views for each page that only signed-in user may see
+  get '/contacts' => 'contacts#index'
+  get '/contacts/new' => 'contacts#new'
+  post '/contacts' => 'contacts#create'
+  get '/contacts/:id' => 'contacts#show'
+  get '/contacts/:id/edit' => 'contacts#edit'
+  patch '/contacts/:id' => 'contacts#update'
+  delete '/contacts/:id' => 'contacts#destroy'
 
   # Emotions
-  get '/emotions' => 'emotions#index' #?
-  get '/emotions/new' => 'emotions#new' #Admin
-  post '/emotions' => 'emotions#create' #Admin
-  get '/emotions/:id' => 'emotions#show' #User
-  get '/emotions/:id/edit' => 'emotions#edit' #Admin
-  patch '/emotions/:id' => 'emotions#update' #Admin
+  get '/emotions' => 'emotions#index', as: 'emotions'
+  get '/emotions/new' => 'emotions#new', as: 'emotions_new'
+  post '/emotions' => 'emotions#create'
+  get '/emotions/:id' => 'emotions#show', as: 'emotion'
+  get '/emotions/:id/edit' => 'emotions#edit', as: 'emotion_edit'
+  patch '/emotions/:id' => 'emotions#update'
   delete '/emotions/:id' => 'emotions#destroy' #Admin
   # TODO: create admin auth
   # TODO: add marked routes to admin only, so users may not see

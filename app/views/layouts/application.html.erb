@@ -18,12 +18,12 @@
       <ul class="main-navigation">
         <!-- PUBLIC LINKS -->
         <li class="navbar-item"><%= link_to "home", root_path %></li>
-        <li class="navbar-item"><a href="/pages/about">about</a></li> <%# TODO: change to link_to %>
+        <li class="navbar-item"><%= link_to "about", pages_about_path %></li> <%# TODO: change to link_to %>
         <!-- DYNAMIC LINK CONTROL -->
         <% if current_user %>
           <li class="navbar-item"><%= link_to "log out", logout_path %></li>
-          <li class="navbar-item"><%= link_to "profile" %></li> <%# TODO: add profile link_to here %>
-          <li class="navbar-item"><%= link_to "text!", texts_new_path %></li>
+          <li class="navbar-item"><%= link_to "profile", pages_profile_path(@user) %></li> <%# TODO: add profile link_to here %>
+          <li class="navbar-item"><%= link_to "text!", root_path %></li>
         <% else %>
           <li class="navbar-item"><%= link_to "log in", login_path %></li>
           <li class="navbar-item"><%= link_to "sign up", signup_path %></li>

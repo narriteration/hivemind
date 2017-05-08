@@ -1,0 +1,63 @@
+<section id="hero" class= "hero u-full-width">
+  <div class="hero-image"></div>
+    <div class="container profile">
+      <div class="row">
+        <div class="offset-by-two eight columns">
+          <div class="hero-heading">
+
+            <div class="user-info">
+              <h1>Profile</h1>
+
+              Name: <%= current_user.name %>
+              <br>
+              Email: <%= current_user.email %>
+              <br>
+              Phone: <%= current_user.phone %>
+              <br>
+              <%= current_user.city %>, <%= current_user.state %>
+              <br>
+              My contacts: <%= current_user.contacts.count %>
+              <br>
+              <br>
+              <%= link_to "Edit", users_edit_path(current_user) %>
+              <%= link_to "Delete My Profile" %> <%# TODO: figure out link_to and delete %>
+              <br>
+              <br>
+              <hr>
+            </div>
+
+            <div class="one-half columns">
+              <%= image_tag "Hexagon.png", :class => "hexagon-about" %>
+              <h5 class="introduction-heading"><%= link_to "Contacts", contacts_path %></h5>
+            </div>
+            <div class="one-half columns">
+              <%= image_tag "Hexagon.png", :class => "hexagon-about" %>
+              <h5 class="introduction-heading"><%= link_to "Texts", texts_path %></h5>
+              <hr>
+            </div>
+
+            <div class="quantified-self">
+              <hr>
+              <h3>Feel like exploring your <%= link_to '#quantifiedself', 'https://twitter.com/hashtag/quantifiedself?lang=en' %>?</h3>
+              <hr>
+            </div>
+
+            <div class="container emotion-viz">
+              <div class="profile-block">
+                <%= image_tag "emotion-viz-demo.png", :class => "profile-data-pic" %>
+              </div>
+            </div>
+
+            <div class="container contact-viz">
+              <div class="profile-block">
+                <h5>Your top 3 Contacts</h5>
+                <hr>
+                <%= image_tag "contacts-viz-demo.png", :class => "profile-data-pic" %>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

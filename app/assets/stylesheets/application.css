@@ -17,6 +17,20 @@
  *= require font-awesome
  */
 
+.profile-block {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+ .profile-data-pic {
+   height: 25em;
+   width: auto;
+ }
+
+ .profile {
+   text-align: center;
+ }
+
 .hexagon-about {
   height: 5em;
   width:auto;
