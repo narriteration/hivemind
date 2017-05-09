@@ -11,6 +11,8 @@ class TextsController < ApplicationController
   # GET /texts/1
   # GET /texts/1.json
   def show
+    contactID = @text.contact_id
+    @contactObject = Contact.find_by_id(contactID)
   end
 
   # GET /texts/new

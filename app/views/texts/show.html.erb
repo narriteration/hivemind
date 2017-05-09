@@ -5,6 +5,19 @@
 <br>
 <br>
 
+<%= link_to "SEND!", trigger_path %>
+
+<br>
+<br>
+
+
+<!--
+<p>
+  <strong>Sent to:</strong>
+  <%= @contactObject.name %>
+  <%= @contactObject.phone %>
+</p>
+
 <p>
   <strong>Emotion:</strong>
   <%= @text.emotion %>
@@ -28,7 +41,7 @@
 <p>
   <strong>Timeframe:</strong>
   <%= @text.timeframe %>
-</p>
+</p> -->
 
 <%= link_to 'Edit', edit_text_path(@text) %> |
 <%= link_to 'Back', texts_path %>

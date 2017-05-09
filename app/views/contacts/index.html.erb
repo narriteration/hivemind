@@ -6,6 +6,12 @@
           <div class="hero-heading">
             <h1>My Contacts</h1>
 
+            <%= link_to "Add A Contact", contacts_new_path %>
+            <%= link_to "Build a Text", new_text_path %>
+
+            <br>
+            <br>
+
             <% if current_user %>
               <%= current_user.contacts.each do |contact| %>
                 <br>
