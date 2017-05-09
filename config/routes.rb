@@ -5,6 +5,11 @@ Rails.application.routes.draw do
 
   root :to => "pages#home"
 
+  # Twilio
+  # post 'twilio/voice' => 'twilio#voice'
+  get '/trigger' => 'notifications#trigger_sms_alerts'
+
+
   # Pages
   get '/pages/home' => 'pages#home'
   get '/pages/about' => 'pages#about'
