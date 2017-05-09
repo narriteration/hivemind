@@ -1,5 +1,5 @@
-<%= form_for(text) do |f| %>
-  <% if text.errors.any? %>
+<%= form_for @text do |f| %>
+  <% if @text.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(text.errors.count, "error") %> prohibited this text from being saved:</h2>
 
@@ -10,6 +10,14 @@
       </ul>
     </div>
   <% end %>
+
+
+  <%= form_for @text do |f| %>
+
+  <div class="form-group">
+    Pick a contact: <%= f.collection_select :contact_id, @contacts, :id, :name,  class: "form-control", autofocus: true %>
+  </div>
+
 
   <div class="field">
     <%= f.label :body %>

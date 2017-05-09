@@ -1,14 +1,34 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @text.body %>
-</p>
 
-<p>
-  <strong>Signature:</strong>
-  <%= @text.signature %>
-</p>
 
-<%= link_to 'Edit', edit_text_path(@text) %> |
-<%= link_to 'Back', texts_path %>
+
+
+<section id="hero" class= "hero u-full-width">
+  <div class="hero-image"></div>
+    <div class="container welcome-about">
+      <div class="row">
+        <div class="offset-by-one ten columns">
+          <div class="hero-heading">
+
+            <p id="notice"><%= notice %></p>
+
+            <p>
+              <strong>Body:</strong>
+              <%= @text.body %>
+            </p>
+
+            <p>
+              <strong>Signature:</strong>
+              <%= @text.signature %>
+            </p>
+
+            <%= link_to 'SEND!', trigger_path, class: 'button button-primary' %>
+            <br>
+            <%= link_to 'Edit', edit_text_path(@text)%>
+            <%= link_to 'Back', texts_path%>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

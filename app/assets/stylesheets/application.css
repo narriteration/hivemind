@@ -16,6 +16,13 @@
  *= require skeleton
  *= require font-awesome
  */
+ .inline {
+   display: inline-block;
+ }
+
+ .centered {
+   text-align: center;
+ }
 
 .profile-block {
   margin-top: 3em;

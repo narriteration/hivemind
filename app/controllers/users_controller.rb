@@ -11,9 +11,10 @@ class UsersController < ApplicationController
     user = User.new(user_params)
     if user.save
       session[:user_id] = user.id
-      redirect_to user_path(user)
+      flash[:notice] = "Successfully signed up."
+      redirect_to pages_profile_path
     else
-      redirect_to '/signup'
+      redirect_to signup_path
     end
   end
 

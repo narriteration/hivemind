@@ -1,13 +1,20 @@
 class NotificationsController < ApplicationController
 
   def trigger_sms_alerts
-    print "HELLO I AM ALIVE"
-    @alert_message = "hello world"
-    @test_contacts = YAML.load_file('config/test_contacts.yml')
 
-    @test_contacts.each do |contact|
+    print "HELLO I AM ALIVE"
+    @test_contact = current_user.contacts.find_by_id(params[:id])
+    print @test_contact
+
+    @contact_text = @test_contact.texts.find_by_id(params[:id])
+    print @contact_text
+
+    @alert_message = @contact_text
+    print @alert_message
+
+    @test_contact.each do |contact|
       begin
-        phone_number = contact['phone_number']
+        phone_number = contact.phone
         send_message(phone_number, @alert_message)
         flash[:success] = "Your text was sent!"
       rescue
@@ -30,7 +37,7 @@ class NotificationsController < ApplicationController
 
       message = @client.account.messages.create(
         :from => @twilio_number,
-        :to => phone_number,
+        :to => phone,
         :body => alert_message
       )
       puts message.to
