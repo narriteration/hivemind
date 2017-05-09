@@ -7,8 +7,7 @@ Rails.application.routes.draw do
 
   # Twilio
   # post 'twilio/voice' => 'twilio#voice'
-  get '/trigger' => 'notifications#trigger_sms_alerts'
-
+  get 'texts/:id/trigger' => 'texts#trigger_sms_alerts', as: 'trigger'
 
   # Pages
   get '/pages/home' => 'pages#home'
@@ -24,25 +23,9 @@ Rails.application.routes.draw do
   get '/users' => 'users#index', as: 'users' #ADMIN
   get '/signup' => 'users#new', as: 'signup'
   post '/users' => 'users#create'
-  # get '/users/:id' => 'users#show', as: 'user'
   get '/users/:id/edit' => 'users#edit', as: 'users_edit'
   patch '/users/:id' => 'users#update'
   delete '/users' => 'users#destroy'
-
-  # Texts
-  # get '/texts' => 'texts#index', as: 'texts'
-  # get '/texts/new' => 'texts#new', as: 'texts_new'
-  # post '/texts' => 'texts#create'
-  # get '/texts/:id' => 'texts#show', as: 'text'
-
-  #TODO: choose how user should be able to go through form to create
-  # text, but then also be able to edit that text.
-  # 1) save to database after first form, then make next page an edit page, and button, when clicked would both save to DB and send via twilio
-  # 2) use cookies to wait to save text to database until user has had oppny to edit.
-
-  # get '/texts/:id/edit' => 'texts#edit'
-  # patch '/texts/:id' => 'texts#update'
-  # delete '/texts/:id' => 'texts#destroy'
 
   # Contacts
   get '/contacts' => 'contacts#index'
