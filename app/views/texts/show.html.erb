@@ -1,13 +1,33 @@
 <p id="notice"><%= notice %></p>
 
+<p><%= "'Hey I'm feeling #{@text.emotion} and I need #{@text.need}. Can #{@text.who} #{@text.action} #{@text.timeframe}?'" %></p>
+
+<br>
+<br>
+
 <p>
-  <strong>Body:</strong>
-  <%= @text.body %>
+  <strong>Emotion:</strong>
+  <%= @text.emotion %>
 </p>
 
 <p>
-  <strong>Signature:</strong>
-  <%= @text.signature %>
+  <strong>Need:</strong>
+  <%= @text.need %>
+</p>
+
+<p>
+  <strong>Who:</strong>
+  <%= @text.who %>
+</p>
+
+<p>
+  <strong>Action:</strong>
+  <%= @text.action %>
+</p>
+
+<p>
+  <strong>Timeframe:</strong>
+  <%= @text.timeframe %>
 </p>
 
 <%= link_to 'Edit', edit_text_path(@text) %> |

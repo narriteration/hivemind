@@ -1,4 +1,5 @@
 <%= form_for(text) do |f| %>
+
   <% if text.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(text.errors.count, "error") %> prohibited this text from being saved:</h2>
@@ -11,15 +12,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :body %>
-    <%= f.text_field :body %>
+  <div class="form-group">
+    Pick a contact: <%= f.collection_select :contact_id, @contacts, :id, :name,  class: "form-control", autofocus: true %>
   </div>
 
-  <div class="field">
-    <%= f.label :signature %>
-    <%= f.text_field :signature %>
-  </div>
+<p>
+  Hey, I'm feeling
+    <div class="field">
+      <%= f.text_field :emotion %>
+    </div>
+and I need
+    <div class="field">
+      <%= f.text_field :need %>
+    </div>
+.
+<br>
+Can
+    <div class="field">
+      <%= f.text_field :who %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :action %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :timeframe %>
+    </div>
+  ?
+  </p>
 
   <div class="actions">
     <%= f.submit %>

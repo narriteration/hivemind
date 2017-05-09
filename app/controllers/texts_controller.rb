@@ -16,10 +16,12 @@ class TextsController < ApplicationController
   # GET /texts/new
   def new
     @text = Text.new
+    @contacts = current_user.contacts
   end
 
   # GET /texts/1/edit
   def edit
+    @contacts = current_user.contacts
   end
 
   # POST /texts
@@ -41,6 +43,7 @@ class TextsController < ApplicationController
   # PATCH/PUT /texts/1
   # PATCH/PUT /texts/1.json
   def update
+    @contacts = current_user.contacts
     respond_to do |format|
       if @text.update(text_params)
         format.html { redirect_to @text, notice: 'Text was successfully updated.' }
@@ -70,6 +73,6 @@ class TextsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def text_params
-      params.require(:text).permit(:body, :signature)
+      params.require(:text).permit(:body, :signature, :emotion, :need, :who, :action, :timeframe, :contact_id)
     end
 end
