@@ -17,6 +17,12 @@
  *= require font-awesome
  */
 
+ .user-greeting {
+   text-align: right;
+   color: #bff442;
+
+ }
+
 .profile-block {
   margin-top: 3em;
   margin-bottom: 3em;
@@ -80,7 +86,7 @@ background-color: #fff;
 color: #36384C;
 }
 
-h2, h3, h4, h5, h6, p, a, span, ol, ul {
+h2, h3, h4, h5, h6, p, a, span, ol, ul li{
   letter-spacing: .05em;
   color: #aaa;
 }
