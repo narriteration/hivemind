@@ -17,6 +17,10 @@
  *= require font-awesome
  */
 
+ .centered {
+   text-align: center;
+ }
+
 
 .hivemind-big {
   max-width: 80%;
