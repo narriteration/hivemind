@@ -70,7 +70,9 @@ class TextsController < ApplicationController
     puts "partial body of text: ", text.emotion
 
     # Define vars for only this method
-    whole_message = "Hey, I'm feeling #{text.emotion}"
+    whole_message = "Hey, I'm feeling #{text.emotion} and I need #{text.need}. Can #{text.who} #{text.action} #{text.timeframe}?"
+    puts "WHOLE MESSAGE: ", whole_message
+
     contact_phone = @contactObject.phone
 
     # Call send_message (private), passing in two agmts
@@ -87,7 +89,8 @@ class TextsController < ApplicationController
       puts "the send message is happening"
 
       @twilio_number = +15304884366
-      @client = Twilio::REST::Client.new('ACc5b4024806cf68a23a9f23ede4de8f2f', '85ad150d4157bd67d0bf2a4f688aa674') #TODO: convert to local ENV variable, then config with heroku
+      @client = Twilio::REST::Client.new('ACc5b4024806cf68a23a9f23ede4de8f2f', '85ad150d4157bd67d0bf2a4f688aa674')
+      #TODO: convert to local ENV variable, then config with heroku
 
       message = @client.account.messages.create(
         :from => @twilio_number,
