@@ -70,7 +70,7 @@ class TextsController < ApplicationController
     puts "partial body of text: ", text.emotion
 
     # Define vars for only this method
-    whole_message = text.emotion
+    whole_message = "Hey, I'm feeling #{text.emotion}"
     contact_phone = @contactObject.phone
 
     # Call send_message (private), passing in two agmts
