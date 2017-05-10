@@ -22,11 +22,13 @@ A mental health and self-improvement app built for the web. Using best practices
 
 # Wishlist / Future Development Plans
 
+- Add optional drop down options to each text form field
 - Refactor as a single-page app using React and Node.js
 - More error handling to prompt triggered actions and confirm completed user actions
 - Data visualization on profile page: 3 top emotions and 3 top contacts. Emotions: link to in-app resource page with information and more resources online. Contacts: add ability to send those contacts a special thank you / celebration text.
 - Add emoji options to text form
 - Add group tags to find and select multiple contacts for group messaging
+- Admin auth and restricting routes
 
 # Built by Chelsea Mangold
 - @narriteration

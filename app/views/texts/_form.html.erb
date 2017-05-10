@@ -27,20 +27,20 @@
                 <p>
                   <br>
                     <div class="field">
-                      Hey, I'm feeling <%= f.text_field :emotion, placeholder: "anxious" %>
+                      Hey, I'm feeling <%= f.text_field :emotion, placeholder: "anxious" %> <%= f.select :emotion, @emotions_array %>
                     </div>
                     <div class="field">
-                      and I need <%= f.text_field :need, placeholder: "to go for a walk" %>.
+                      and I need <%= f.text_field :need, placeholder: "to go for a walk" %> <%= f.select :emotion, @needs_array %>.
                     </div>
                     <br>
                     <div class="field">
-                      Can <%= f.text_field :who, placeholder: "you" %>
+                      Can <%= f.text_field :who, placeholder: "you" %> <%= f.select :who, @who_array %>
                     </div>
                     <div class="field">
-                      <%= f.text_field :action, placeholder: "come over" %>
+                      <%= f.text_field :action, placeholder: "come over" %> <%= f.select :action, @actions_array %>
                     </div>
                     <div class="field">
-                      <%= f.text_field :timeframe, placeholder: "later today"%>?
+                      <%= f.text_field :timeframe, placeholder: "later today"%> <%= f.select :timeframe, @timeframe_array %>?
                     </div>
                 </p>
               </div>
