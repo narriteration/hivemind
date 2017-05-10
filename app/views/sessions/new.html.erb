@@ -11,6 +11,14 @@
               Email: <%= text_field_tag :email %><br>
               Password: <%= password_field_tag :password %><br>
               <%= submit_tag "Submit", :class => 'button button-primary' %>
+              <br>
+              <br>
+              <h6>If you are in crisis, <%= link_to "here", "http://www.sfsuicide.org/" %> are some immediate resources that may better meet your needs:</h6>
+
+                  <p><%= link_to "24/7 hotlines", "http://www.sfsuicide.org/" %>, <%= link_to "Chat", "http://chat.suicidepreventionlifeline.org/GetHelp/LifelineChat.aspx" %>
+                  <br>
+                  or text "MYLIFE" to 741741
+
 
             <% end %>
           </div>
