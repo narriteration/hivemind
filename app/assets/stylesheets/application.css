@@ -17,6 +17,15 @@
  *= require font-awesome
  */
 
+
+.hivemind-big {
+  max-width: 80%;
+}
+
+.hi-big {
+  max-width: 50%;
+}
+
  .user-greeting {
    text-align: right;
    color: #bff442;
@@ -87,6 +96,6 @@ color: #36384C;
 }
 
 h2, h3, h4, h5, h6, p, a, span, ol, ul li{
-  letter-spacing: .05em;
+  letter-spacing: .02em;
   color: #aaa;
 }

@@ -7,7 +7,10 @@
 
             <div class="user-info">
 
-              <h1>Hi <%= current_user.name%>!</h1>
+<div class="hello-user">
+  <%= image_tag "hi_logo.png", :class => "hi-big" %> <h1><%= current_user.name%>!</h1>
+
+</div>
               <br>
               Name: <%= current_user.name %>
               <br>
