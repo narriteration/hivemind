@@ -1,12 +1,6 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 p "Seeding database..."
+
+# USERS
 
 User.destroy_all
 p "USER records destroyed"
@@ -66,56 +60,10 @@ end
 users = User.create(ffaker_users_data)
 
 
-##############################################################
+# CONTACTS
 
-#
-# Contact.destroy_all
-# p "CONTACT records destroyed"
-#
-# Contact.create([
-#   {
-#     first_name: "Emily",
-#     last_name: "Smizer",
-#     nickname: "Smize",
-#     phone: "+16176970979",
-#     city: "Berkeley",
-#     state: "CA",
-#     user_id: 5,
-#     approved: false
-#   },
-#   {
-#     first_name: "Georgia",
-#     last_name: "Faulkner",
-#     nickname: "Geeg",
-#     phone: "+15306133269",
-#     city: "Oakland",
-#     state: "CA",
-#     user_id: 5,
-#     approved: false
-#   },
-#   {
-#     first_name: "Rafa",
-#     last_name: "Sanchez-Cruz",
-#     nickname: "Ralf",
-#     phone: "+12096798407",
-#     city: "Washington",
-#     state: "District of Columbia",
-#     user_id: 5,
-#     approved: false
-#   },
-#   {
-#     first_name: "Chloe",
-#     last_name: "Wilder",
-#     nickname: "Chloe",
-#     phone: "+14085960370",
-#     city: "Oakland",
-#     state: "CA",
-#     user_id: 5,
-#     approved: false
-#   }
-# ])
-#
-# p "Real CONTACTS for seeded chelsea profile created: #{Contact.count}"
+Contact.destroy_all
+p "CONTACT records destroyed"
 
 
 contact_data = []
