@@ -3,6 +3,14 @@ Rails.application.routes.draw do
   resources :texts
   resources :contacts
 
+  # get '/texts' => 'texts#index', as: 'texts'
+  # post '/texts' => 'texts#create'
+  # get '/texts/new' => 'texts#new', as: 'new_text'
+  # get '/texts/:id/edit' => 'texts#edit', as: 'edit_text'
+  # patch '/texts/:id' => 'texts#update'
+  # put '/texts/:id' => 'texts#update'
+  # delete '/texts/:id' => 'texts#destroy'
+
   root :to => "pages#home"
 
   # Twilio
@@ -19,7 +27,7 @@ Rails.application.routes.draw do
   get '/logout' => 'sessions#destroy'
 
   # Users
-  get '/users' => 'users#index', as: 'users' #ADMIN
+  get '/users' => 'users#index', as: 'users'
   get '/signup' => 'users#new', as: 'signup'
   post '/users' => 'users#create'
   get '/users/:id/edit' => 'users#edit', as: 'users_edit'
@@ -42,7 +50,7 @@ Rails.application.routes.draw do
   get '/emotions/:id' => 'emotions#show', as: 'emotion'
   get '/emotions/:id/edit' => 'emotions#edit', as: 'emotion_edit'
   patch '/emotions/:id' => 'emotions#update'
-  delete '/emotions/:id' => 'emotions#destroy' #Admin
+  delete '/emotions/:id' => 'emotions#destroy'
   # TODO: create admin auth
   # TODO: add marked routes to admin only, so users may not see
 

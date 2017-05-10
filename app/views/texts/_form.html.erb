@@ -1,49 +1,58 @@
-<%= form_for(text) do |f| %>
+<section id="hero" class= "hero u-full-width">
+  <div class="hero-image"></div>
+    <div class="container signup">
+      <div class="row">
+        <div class="offset-by-one ten columns">
+          <div class="hero-heading form-centered">
 
-  <% if text.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(text.errors.count, "error") %> prohibited this text from being saved:</h2>
+            <%= form_for(text) do |f| %>
 
-      <ul>
-      <% text.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+              <% if text.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(text.errors.count, "error") %> prohibited this text from being saved:</h2>
+
+                  <ul>
+                  <% text.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+              <div class="form-group">
+                Pick a contact: <%= f.collection_select :contact_id, @contacts, :id, :name,  class: "form-control", autofocus: true %>
+              </div>
+
+              <div class="form-group">
+                <p>
+                  <br>
+                    <div class="field">
+                      Hey, I'm feeling <%= f.text_field :emotion, placeholder: "anxious" %>
+                    </div>
+                    <div class="field">
+                      and I need <%= f.text_field :need, placeholder: "to go for a walk" %>.
+                    </div>
+                    <br>
+                    <div class="field">
+                      Can <%= f.text_field :who, placeholder: "you" %>
+                    </div>
+                    <div class="field">
+                      <%= f.text_field :action, placeholder: "come over" %>
+                    </div>
+                    <div class="field">
+                      <%= f.text_field :timeframe, placeholder: "later today"%>?
+                    </div>
+                </p>
+              </div>
+
+
+              <div class="actions">
+                <%= f.submit "Save Draft and See My Text", :class => "button button-primary" %>
+              </div>
+            <% end %>
+
+          </div>
+        </div>
+      </div>
     </div>
-  <% end %>
-
-  <div class="form-group">
-    Pick a contact: <%= f.collection_select :contact_id, @contacts, :id, :name,  class: "form-control", autofocus: true %>
-  </div>
-
-<p>
-  Hey, I'm feeling
-
-    <div class="field">
-      <%= f.text_field :emotion %>
-    </div>
-and I need
-    <div class="field">
-      <%= f.text_field :need %>
-    </div>
-.
-<br>
-Can
-    <div class="field">
-      <%= f.text_field :who %>
-    </div>
-
-    <div class="field">
-      <%= f.text_field :action %>
-    </div>
-
-    <div class="field">
-      <%= f.text_field :timeframe %>
-    </div>
-  ?
-  </p>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</section>

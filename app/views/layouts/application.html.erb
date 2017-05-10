@@ -27,6 +27,11 @@
           <li class="navbar-item"><%= link_to "profile", pages_profile_path(@user) %></li>
           <li class="navbar-item"><%= link_to "build a text!", new_text_path %></li>
           <li class="navbar-item"><%= link_to "add contact!", contacts_new_path(@user) %></li>
+          <li class="user-greeting">
+            <% if current_user %>
+                Successfully signed in as <%= current_user.name %>
+            <% end %>
+          </div>
         <% else %>
           <li class="navbar-item"><%= link_to "log in", login_path %></li>
           <li class="navbar-item"><%= link_to "sign up", signup_path %></li>
@@ -34,11 +39,6 @@
       </ul>
     </nav>
 
-    <div class="user-greeting">
-      <% if current_user %>
-          Hello <%= current_user.name %>!
-      <% end %>
-    </div>
     <%# TODO: change to flash? delete? %>
 
     <%= yield %>

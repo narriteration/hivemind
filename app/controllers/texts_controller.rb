@@ -76,6 +76,8 @@ class TextsController < ApplicationController
     # Call send_message (private), passing in two agmts
     send_message(contact_phone, whole_message)
 
+    redirect_to pages_profile_path
+
   end
 
   private

@@ -1,6 +1,22 @@
-<h1>Editing Text</h1>
+<section id="hero" class= "hero u-full-width">
+  <div class="hero-image"></div>
+    <div class="container signup">
+      <div class="row">
+        <div class="offset-by-one ten columns">
+          <div class="hero-heading form-centered">
 
-<%= render 'form', text: @text %>
+            <h5>Something not quite right?</h5>
+            <br>
+            <h1>Edit Your Draft</h1>
+            <br>
 
-<%= link_to 'Show', @text %> |
-<%= link_to 'Back', texts_path %>
+            <%= render 'form', text: @text %>
+
+            <%= link_to 'Show', @text %> |
+            <%= link_to 'Back', texts_path %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

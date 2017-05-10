@@ -1,5 +1,21 @@
-<h1>New Text</h1>
+<section id="hero" class= "hero u-full-width">
+  <div class="hero-image"></div>
+    <div class="container signup">
+      <div class="row">
+        <div class="offset-by-one ten columns">
+          <div class="hero-heading form-centered">
 
-<%= render 'form', text: @text %>
+            <h1>Build A Text</h1>
+            <h5>Helping you help yourself.
+            <br>
+            Use the form below to find the words you've had all along.</h5>
+            <br>
+            <br>
 
-<%= link_to 'Back', texts_path %>
+            <%= render 'form', text: @text %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+</section>

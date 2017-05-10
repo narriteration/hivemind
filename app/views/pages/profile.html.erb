@@ -7,7 +7,7 @@
 
             <div class="user-info">
 
-              <h1>Profile</h1>
+              <h1>Hi <%= current_user.name%>!</h1>
               <br>
               Name: <%= current_user.name %>
               <br>
@@ -17,51 +17,94 @@
               <br>
               <%= current_user.city %>, <%= current_user.state %>
               <br>
-              My contacts: <%= current_user.contacts.count %>
-              <br>
-              <br>
-              <!-- <%= link_to "Edit", users_edit_path(current_user) %>
-              <%= link_to "Delete My Profile" %>  -->
-              <br>
-              <br>
+              <%= link_to "Edit", users_edit_path(current_user), :class => 'button button-primary' %>
+              <%= link_to "Delete My Account", pages_profile_path, :class => 'button button-primary' %>
               <hr>
-            </div>
-
-            <div class="one-half columns">
-              <%= image_tag "Hexagon.png", :class => "hexagon-about" %>
-              <h5 class="introduction-heading"><%= link_to "Contacts", contacts_path %></h5>
-              <h5 class="introduction-heading"><%= link_to "Add Contact", contacts_new_path %></h5>
-            </div>
-            <div class="one-half columns">
-              <%= image_tag "Hexagon.png", :class => "hexagon-about" %>
-              <h5 class="profile-actions"><%= link_to "Texts", texts_path %></h5>
-              <h5 class="profile-actions"><%= link_to "Build a Text", new_text_path %></h5>
-              <br>
-              <hr>
-            </div>
-
-            <div class="quantified-self">
-              <hr>
-              <h3>Feel like exploring your <%= link_to '#quantifiedself', 'https://twitter.com/hashtag/quantifiedself?lang=en' %>?</h3>
-              <hr>
-            </div>
-
-            <div class="container emotion-viz">
-              <div class="profile-block">
-                <%= image_tag "emotion-viz-demo.png", :class => "profile-data-pic" %>
-              </div>
-            </div>
-
-            <div class="container contact-viz">
-              <div class="profile-block">
-                <h5>Your top 3 Contacts</h5>
-                <hr>
-                <%= image_tag "contacts-viz-demo.png", :class => "profile-data-pic" %>
-              </div>
             </div>
 
           </div>
         </div>
       </div>
     </div>
+</section>
+
+
+
+<!-- ACTIONS -->
+  <section id="introduction" class= "hero u-full-width">
+    <div class="hero-image"></div>
+      <div class="container welcome-about">
+        <div class="row">
+          <div class="offset-by-one ten columns">
+            <div class="hero-heading">
+
+              <div class="six columns">
+
+                <h5>Showing <%= current_user.contacts.count %> out of <%= current_user.contacts.count %> contacts</h5>
+                <br>
+                <br>
+                <%= link_to "Add Contact", contacts_new_path, :class => 'button button-primary' %>
+                <br>
+                <br>
+                <% if current_user %>
+                  <%= current_user.contacts.each do |contact| %>
+                    <br>
+                    <%= contact.name %>
+                    <br>
+                    <%= contact.phone %>
+                    <br>
+                    <br>
+                  <% end %>
+                <% end %>
+                <br>
+                <br>
+              <%= link_to "Manage My Contacts", contacts_path %>
+
+              </div>
+
+              <div class="six columns">
+                <h5>Already see your preferred contact to the left here? Use our Build-A-Text tool to help you word that request.</h5>
+                <h5 class="profile-actions"><%= link_to "Build a Text", new_text_path, :class => 'button button-primary' %></h5>
+                <hr>
+              </div>
+
+          </div>
+        </div>
+      </div>
   </section>
+
+
+
+<!-- QUANTIFIED SELF -->
+  <section id="hero" class= "hero u-full-width">
+    <div class="hero-image"></div>
+      <div class="container welcome-about">
+        <div class="row">
+          <div class="offset-by-one ten columns">
+            <div class="hero-heading">
+
+              <div class="quantified-self">
+                <hr>
+                <h3>Feel like exploring your <%= link_to '#quantifiedself', 'https://twitter.com/hashtag/quantifiedself?lang=en' %>?</h3>
+                <hr>
+              </div>
+
+              <div class="container emotion-viz">
+                <div class="profile-block">
+                  <%= image_tag "emotion-viz-demo.png", :class => "profile-data-pic" %>
+                </div>
+              </div>
+
+              <div class="container contact-viz">
+                <div class="profile-block">
+                  <h5>Your top 3 Contacts</h5>
+                  <hr>
+                  <%= image_tag "contacts-viz-demo.png", :class => "profile-data-pic" %>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

@@ -4,12 +4,15 @@
       <div class="row">
         <div class="offset-by-one ten columns">
           <div class="hero-heading form-centered">
-            <h1>Add a Contact</h1>
+            <h1>Add a New Contact</h1>
 
             <%= form_for :contact, url: '/contacts' do |f| %>
 
-              Name*: <%= f.text_field :name %><br>
-              Phone: <%= f.text_field :phone %><br>
+              Name: <%= f.text_field :name, :autofocus => true, placeholder: "Ada Lovelace" %><br>
+              Phone: <%= f.text_field :phone, placeholder: "+15556984545" %><br>
+              <p>Please enter this number just like our example:
+              <br>
+              "+1" followed by your area code and 7 digit cell phone number</p>
               <%= f.submit "Submit", :class => 'button button-primary' %>
 
             <% end %>
