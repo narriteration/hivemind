@@ -5,13 +5,13 @@ A mental health and self-improvement app built for the web. Using best practices
 # Wireframes & User Stories
 
 ![Logo](app/assets/images/logo.png)
-![ERD:](https://github.com/narriteration/hivemind/tree/master/app/assets/images/final_erd.jpg)
-![Models:](https://github.com/narriteration/hivemind/tree/master/app/assets/images/models.jpg)
-![User Story1:]()
-![User Story2:]()
-![User Story3:]()
-![Shoutouts:](https://github.com/narriteration/hivemind/tree/master/app/assets/images/shoutouts.jpg)
-![Future Plans:](https://github.com/narriteration/hivemind/tree/master/app/assets/images/future_plans.jpg)
+![ERD](app/assets/images/final_erd.jpg)
+![Models:](app/assets/images/models.jpg)
+![User Story1]()
+![User Story2]()
+![User Story3]()
+![Shoutouts](app/assets/images/shoutouts.jpg)
+![Future Plans](app/assets/images/future_plans.jpg)
 
 
 # Tech
