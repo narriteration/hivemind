@@ -1,14 +1,27 @@
-<p id="notice"><%= notice %></p>
+<section id="hero" class= "hero u-full-width">
+  <div class="hero-image"></div>
+    <div class="container signup">
+      <div class="row">
+        <div class="offset-by-one ten columns">
+          <div class="hero-heading form-centered">
 
-<p>
-  <strong>Name:</strong>
-  <%= @contact.name %>
-</p>
+            <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @contact.phone %>
-</p>
+            <p>
+              <strong>Name:</strong>
+              <%= @contact.name %>
+            </p>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+            <p>
+              <strong>Phone:</strong>
+              <%= @contact.phone %>
+            </p>
+
+            <%= link_to 'Edit', edit_contact_path(@contact) %> |
+            <%= link_to 'Back', contacts_path %>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -12,19 +12,21 @@
 
     <!-- NAVBAR -->
     <nav class="navigation">
-      <a href="#" class="menu-icon">
+      <!-- <a href="#" class="menu-icon">
         <i class="fa fa-bars"></i>
-      </a>
+      </a> -->
       <ul class="main-navigation">
+
         <!-- PUBLIC LINKS -->
         <li class="navbar-item"><%= link_to "home", root_path %></li>
-        <li class="navbar-item"><%= link_to "about", pages_about_path %></li> <%# TODO: change to link_to %>
+        <li class="navbar-item"><%= link_to "about", pages_about_path %></li>
+
         <!-- DYNAMIC LINK CONTROL -->
         <% if current_user %>
           <li class="navbar-item"><%= link_to "log out", logout_path %></li>
-          <li class="navbar-item"><%= link_to "profile", pages_profile_path(@user) %></li> <%# TODO: add profile link_to here %>
-          <li class="navbar-item"><%= link_to "texts!", new_text_path %></li>
-          <li class="navbar-item"><%= link_to "contacts!", contacts_path(@user) %></li>
+          <li class="navbar-item"><%= link_to "profile", pages_profile_path(@user) %></li>
+          <li class="navbar-item"><%= link_to "build a text!", new_text_path %></li>
+          <li class="navbar-item"><%= link_to "add contact!", contacts_new_path(@user) %></li>
         <% else %>
           <li class="navbar-item"><%= link_to "log in", login_path %></li>
           <li class="navbar-item"><%= link_to "sign up", signup_path %></li>
@@ -32,11 +34,12 @@
       </ul>
     </nav>
 
-<div class="user-greeting">
-  <% if current_user %>
-      Hello <%= current_user.name %>!
-  <% end %>
-</div>
+    <div class="user-greeting">
+      <% if current_user %>
+          Hello <%= current_user.name %>!
+      <% end %>
+    </div>
+    <%# TODO: change to flash? delete? %>
 
     <%= yield %>
   </body>

@@ -23,11 +23,8 @@ class UsersController < ApplicationController
 
   def edit
     if current_user != @user
-      redirect_to "/locations"
+      redirect_to signup_path
   end
-  end
-
-
 
   private
 

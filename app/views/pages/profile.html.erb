@@ -6,8 +6,9 @@
           <div class="hero-heading">
 
             <div class="user-info">
-              <h1>Profile</h1>
 
+              <h1>Profile</h1>
+              <br>
               Name: <%= current_user.name %>
               <br>
               Email: <%= current_user.email %>
@@ -19,8 +20,8 @@
               My contacts: <%= current_user.contacts.count %>
               <br>
               <br>
-              <%= link_to "Edit", users_edit_path(current_user) %>
-              <%= link_to "Delete My Profile" %> <%# TODO: figure out link_to and delete %>
+              <!-- <%= link_to "Edit", users_edit_path(current_user) %>
+              <%= link_to "Delete My Profile" %>  -->
               <br>
               <br>
               <hr>
