@@ -10,10 +10,49 @@ class TextsController < ApplicationController
   def show
     contactID = @text.contact_id
     @contactObject = Contact.find_by_id(contactID)
+    @user = current_user
   end
 
   def new
     @text = Text.new
+    @contacts = current_user.contacts
+    @user = current_user.name
+    @emotions_array = [
+      "confused",
+      "angry",
+      "sad",
+      "frustrated",
+      "guilty",
+      "anxious",
+      "nervous",
+      "pessimistic",
+      "jealous",
+      "lonely",
+      "greedy",
+      "hopeless",
+      "blah",
+      "pissed",
+      "tired"
+    ]
+    @who_array = [
+      "I",
+      "you",
+      "we"
+    ]
+    @timeframe_array = [
+      "in the next few hours",
+      "sometime today",
+      "tonight",
+      "sometime in the next few days",
+      "sometime this week",
+      "this weekend",
+      "in the next few weeks",
+      "this month",
+      "in the next few months"
+    ]
+  end
+
+  def edit
     @contacts = current_user.contacts
     @emotions_array = [
       "confused",
@@ -32,40 +71,10 @@ class TextsController < ApplicationController
       "pissed",
       "tired"
     ]
-    @needs_array = [
-      "to go dance / go out",
-      "to get out of the house",
-      "to vent for a few minutes out loud",
-      "some advice",
-      "some help",
-      "to talk out loud for a few minutes",
-      "another opinion",
-      "some affirmation",
-      "some real talk",
-      "a friend"
-    ]
     @who_array = [
       "I",
       "you",
       "we"
-    ]
-    @actions_array = [
-      "call you",
-      "call me",
-      "text you",
-      "text me",
-      "hang out",
-      "meet up",
-      "talk",
-      "get a drink",
-      "get a coffee",
-      "cook some food",
-      "go to dinner",
-      "go to lunch",
-      "do some arts / crafts",
-      "go to the gym",
-      "stretch",
-      "read"
     ]
     @timeframe_array = [
       "in the next few hours",
@@ -78,10 +87,6 @@ class TextsController < ApplicationController
       "this month",
       "in the next few months"
     ]
-  end
-
-  def edit
-    @contacts = current_user.contacts
   end
 
   def create

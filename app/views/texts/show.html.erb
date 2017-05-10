@@ -1,47 +1,42 @@
-<p id="notice"><%= notice %></p>
+<section id="hero" class= "hero u-full-width">
+  <div class="hero-image"></div>
+    <div class="container signup">
+      <div class="row">
+        <div class="offset-by-one ten columns">
+          <div class="hero-heading form-centered">
 
-<p><%= "'Hey I'm feeling #{@text.emotion} and I need #{@text.need}. Can #{@text.who} #{@text.action} #{@text.timeframe}?'" %></p>
+            <p id="notice"><%= notice %></p>
+            <p><%= "'Hey I'm feeling #{@text.emotion} and I need #{@text.need}. Can #{@text.who} #{@text.action} #{@text.timeframe}?'" %></p>
+            <br>
+            <br>
+            <%= link_to "SEND!", trigger_path %>
+            <br>
+            <br>
 
-<br>
-<br>
+            <p><strong>Sent to:</strong>
+              <%= @contactObject.name %>
+              <%= @contactObject.phone %></p>
 
-<%= link_to "SEND!", trigger_path %>
+            <p><strong>Emotion:</strong>
+              <%= @text.emotion %></p>
 
-<br>
-<br>
+            <p><strong>Need:</strong>
+              <%= @text.need %></p>
 
+            <p><strong>Who:</strong>
+              <%= @text.who %></p>
 
+            <p><strong>Action:</strong>
+              <%= @text.action %></p>
 
-<p>
-  <strong>Sent to:</strong>
-  <%= @contactObject.name %>
-  <%= @contactObject.phone %>
-</p>
+            <p><strong>Timeframe:</strong>
+              <%= @text.timeframe %></p>
 
-<p>
-  <strong>Emotion:</strong>
-  <%= @text.emotion %>
-</p>
+            <%= link_to 'Edit', edit_text_path(@text) %> |
+            <%= link_to 'Back', texts_path %>
 
-<p>
-  <strong>Need:</strong>
-  <%= @text.need %>
-</p>
-
-<p>
-  <strong>Who:</strong>
-  <%= @text.who %>
-</p>
-
-<p>
-  <strong>Action:</strong>
-  <%= @text.action %>
-</p>
-
-<p>
-  <strong>Timeframe:</strong>
-  <%= @text.timeframe %>
-</p>
-
-<%= link_to 'Edit', edit_text_path(@text) %> |
-<%= link_to 'Back', texts_path %>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
