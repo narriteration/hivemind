@@ -5,21 +5,9 @@ A mental health and self-improvement app built for the web. Using best practices
 # Wireframes & User Stories
 
 - [Wireframes](https://app.moqups.com/cmangold/QOGkiGIPCQ/view/page/ad64222d5?ui=0)
-
 *Honor system; please leave the editing to me* :)
 
-
 - User stories: ![User Story](app/assets/images/user_story.JPG)
-
-# Additional Planning
-
-![Logo](app/assets/images/logo.png)
-![Final ERD](app/assets/images/erd_final.jpg)
-![Models](app/assets/images/models.jpg)
-
-![Shoutouts](app/assets/images/shoutouts.jpg)
-![Future Plans](app/assets/images/future_plans.jpg)
-
 
 # Tech
 
@@ -42,6 +30,16 @@ A mental health and self-improvement app built for the web. Using best practices
 - Add data visualization on profile page: 3 top emotions and 3 top contacts. Emotions: link to in-app resource page with information and more resources online. Contacts: add ability to send those contacts a special thank you / celebration text.
 - Add group tags to find and select multiple contacts for group messaging
 - Administrator auth
+
+# Additional Information
+
+![Logo](app/assets/images/logo.png)
+![Final ERD](app/assets/images/erd_final.jpg)
+![Models](app/assets/images/models.jpg)
+![Code](app/assets/images/code_screenshot.png)
+
+![Shoutouts](app/assets/images/shoutouts.jpg)
+![Future Plans](app/assets/images/future_plans.jpg)
 
 # Built by Chelsea Mangold
 

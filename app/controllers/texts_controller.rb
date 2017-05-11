@@ -126,26 +126,20 @@ class TextsController < ApplicationController
 
   def trigger_sms_alerts
 
-    puts "trigger sms running"
-
     text = Text.find(params[:id])
-    puts "text is #{text}"
 
-    # Define vars
+    # Define vars to access text associations
     contactID = text.contact_id
     @contactObject = Contact.find_by_id(contactID)
 
-    puts "phone number trying to send to: ", @contactObject.phone
-    puts "partial body of text: ", text.emotion
-
-    # Define vars for only this method
-    whole_message = "Hey, I'm feeling #{text.emotion} and I need #{text.need}. Can #{text.who} #{text.action} #{text.timeframe}?"
-    puts "WHOLE MESSAGE: ", whole_message
-
+    # Define 2 vars: recipient phone and whole message
     contact_phone = @contactObject.phone
+    whole_message = "Hey, I'm feeling #{text.emotion} and I need #{text.need}. Can #{text.who} #{text.action} #{text.timeframe}?"
 
-    # Call send_message (private), passing in two agmts
+    # Call send_message (private method), passing in two agmts
     send_message(contact_phone, whole_message)
+
+    # Redirect after sent
     redirect_to pages_profile_path, notice: 'Woohoo, help is on the way!'
 
   end
@@ -156,7 +150,6 @@ class TextsController < ApplicationController
 
       @twilio_number = +15304884366
       @client = Twilio::REST::Client.new('ACc5b4024806cf68a23a9f23ede4de8f2f', '85ad150d4157bd67d0bf2a4f688aa674')
-      #TODO: convert to local ENV variable, then config with heroku
 
       message = @client.account.messages.create(
         :from => @twilio_number,
