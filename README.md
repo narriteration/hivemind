@@ -6,7 +6,7 @@ A mental health and self-improvement app built for the web. Using best practices
 
 - [Wireframes](https://app.moqups.com/cmangold/QOGkiGIPCQ/view/page/ad64222d5?ui=0)
 
-Honor system; please leave the editing to me :)
+*Honor system; please leave the editing to me* :)
 
 
 - User stories: ![User Story](app/assets/images/user_story.JPG)
