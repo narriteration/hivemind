@@ -30,6 +30,10 @@
   max-width: 50%;
 }
 
+.error-img {
+  max-width: 60%;
+}
+
  .user-greeting {
    text-align: right;
    color: #bff442;

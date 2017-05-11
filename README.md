@@ -4,17 +4,23 @@ A mental health and self-improvement app built for the web. Using best practices
 
 # Wireframes & User Stories
 
+[Wireframes](https://app.moqups.com/cmangold/QOGkiGIPCQ/view/page/ad64222d5?ui=0)
+Honor system; please leave the editing to me :)
+![User Story](app/assets/images/user_story.JPG)
+
+# Additional Planning
+
 ![Logo](app/assets/images/logo.png)
-![ERD](app/assets/images/final_erd.jpg)
-![Models:](app/assets/images/models.jpg)
-![User Story1]()
-![User Story2]()
-![User Story3]()
+![Initial ERD](app/assets/images/erd_original.jpg)
+![Final ERD](app/assets/images/erd_final.jpg)
+![Models](app/assets/images/models.jpg)
+
 ![Shoutouts](app/assets/images/shoutouts.jpg)
 ![Future Plans](app/assets/images/future_plans.jpg)
 
 
 # Tech
+
 - Front-end: Skeleton
 - Back-end: Ruby on Rails
 - Auth: bcrypt
@@ -22,14 +28,20 @@ A mental health and self-improvement app built for the web. Using best practices
 
 # Wishlist / Future Development Plans
 
-- Add optional drop down options to each text form field
+### Forms
+- Modify form fields in "new text" form so that user has option to fill empty text field with custom data, or to choose from a selection (dropdown)
+- Emoji and photo (mms) options to "new text" form
+- Form validation and error handling
+
+### Design
 - Refactor as a single-page app using React and Node.js
-- More error handling to prompt triggered actions and confirm completed user actions
-- Data visualization on profile page: 3 top emotions and 3 top contacts. Emotions: link to in-app resource page with information and more resources online. Contacts: add ability to send those contacts a special thank you / celebration text.
-- Add emoji options to text form
+
+### Features
+- Add data visualization on profile page: 3 top emotions and 3 top contacts. Emotions: link to in-app resource page with information and more resources online. Contacts: add ability to send those contacts a special thank you / celebration text.
 - Add group tags to find and select multiple contacts for group messaging
-- Admin auth and restricting routes
+- Administrator auth
 
 # Built by Chelsea Mangold
-- @narriteration
+
+- https://twitter.com/narriteration
 - https://github.com/narriteration
