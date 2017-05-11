@@ -146,16 +146,13 @@ class TextsController < ApplicationController
 
     # Call send_message (private), passing in two agmts
     send_message(contact_phone, whole_message)
-
-    redirect_to pages_profile_path
+    redirect_to pages_profile_path, notice: 'Woohoo, help is on the way!'
 
   end
 
   private
 
     def send_message(phoneTACO, textTACO)
-
-      puts "the send message is happening"
 
       @twilio_number = +15304884366
       @client = Twilio::REST::Client.new('ACc5b4024806cf68a23a9f23ede4de8f2f', '85ad150d4157bd67d0bf2a4f688aa674')
