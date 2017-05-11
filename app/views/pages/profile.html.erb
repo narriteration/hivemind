@@ -4,27 +4,33 @@
       <div class="row">
         <div class="offset-by-two eight columns">
           <div class="hero-heading">
-
             <div class="user-info">
 
-<div class="hello-user">
-  <%= image_tag "hi_logo.png", :class => "hi-big" %> <h1><%= current_user.name%>!</h1>
+              <div class="hello-user">
+                <%= image_tag "hi_logo.png", :class => "hi-big" %> <h1><%= current_user.name%></h1>
+              </div>
 
-</div>
-              <br>
-              Name: <%= current_user.name %>
-              <br>
-              Email: <%= current_user.email %>
-              <br>
-              Phone: <%= current_user.phone %>
-              <br>
-              <%= current_user.city %>, <%= current_user.state %>
-              <br>
-              <%= link_to "Edit", users_edit_path(current_user), :class => 'button button-primary' %>
-              <%= link_to "Delete My Account", pages_profile_path, :class => 'button button-primary' %>
-              <hr>
+              <div class="current-user-info">
+                <br>
+                Name: <%= current_user.name %>
+                <br>
+                Email: <%= current_user.email %>
+                <br>
+                Phone: <%= current_user.phone %>
+                <br>
+                <%= current_user.city %>, <%= current_user.state %>
+                <br>
+                <br>
+                <br>
+              </div>
+
+              <div class="current-user-actions">
+                <%= link_to "Edit", users_edit_path(current_user), :class => 'button button-primary' %>
+                <%= link_to "Delete My Account", pages_profile_path, :class => 'button button-primary' %>
+                <hr>
+              </div>
+
             </div>
-
           </div>
         </div>
       </div>
@@ -39,11 +45,12 @@
       <div class="container welcome-about">
         <div class="row">
           <div class="offset-by-one ten columns">
-            <div class="hero-heading">
+            <div class="hero-heading centered">
 
               <div class="six columns">
 
-                <h5>Showing <%= current_user.contacts.count %> out of <%= current_user.contacts.count %> contacts</h5>
+                <h5>STEP 1: <br>Add contacts</h5>
+                <h5>You've already added <%= current_user.contacts.count %> contacts. Hooray!</h5>
                 <br>
                 <br>
                 <%= link_to "Add Contact", contacts_new_path, :class => 'button button-primary' %>
@@ -66,7 +73,9 @@
               </div>
 
               <div class="six columns">
-                <h5>Already see your preferred contact to the left here? Use our Build-A-Text tool to help you word that request.</h5>
+                <h5>STEP 2: <br>Build a text and send with a click.</h5>
+                <br>
+                <br>
                 <h5 class="profile-actions"><%= link_to "Build a Text", new_text_path, :class => 'button button-primary' %></h5>
                 <hr>
               </div>
@@ -84,7 +93,7 @@
       <div class="container welcome-about">
         <div class="row">
           <div class="offset-by-one ten columns">
-            <div class="hero-heading">
+            <div class="hero-heading centered">
 
               <div class="quantified-self">
                 <hr>
