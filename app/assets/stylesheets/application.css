@@ -17,28 +17,7 @@
  *= require font-awesome
  */
 
- .centered {
-   text-align: center;
- }
-
-
-.hivemind-big {
-  max-width: 80%;
-}
-
-.hi-big {
-  max-width: 50%;
-}
-
-.error-img {
-  max-width: 60%;
-}
-
- .user-greeting {
-   text-align: right;
-   color: #bff442;
-
- }
+/*CLASSES*/
 
 .profile-block {
   margin-top: 3em;
@@ -54,12 +33,16 @@
    text-align: center;
  }
 
+ .centered {
+   text-align: center;
+ }
+
 .hexagon-about {
   height: 5em;
   width:auto;
 }
 
- .main-navigation {
+.main-navigation {
 	width: 100%;
 	float: left;
 	margin: 0 0 3em 0;
@@ -69,14 +52,6 @@
   border-top: 1px solid #ccc;
 	list-style: none;
 }
-
-/*.main-navigation li {
-	float: right;
-  display: inline-block;
-
-   }*/
-/* TODO: why does adding FLOAT break link function?
-Answer: the main div with content below (in page) prevents the a tag from being clickable */
 
 .main-navigation li a {
   		display: block;
@@ -97,6 +72,26 @@ Answer: the main div with content below (in page) prevents the a tag from being 
 .columns {
    width: 100%;
 }
+
+.hivemind-big {
+ max-width: 80%;
+}
+
+.hi-big {
+ max-width: 50%;
+}
+
+.error-img {
+ max-width: 60%;
+}
+
+.user-greeting {
+  text-align: right;
+  color: #32C3F0;
+  padding-right: 5em;
+}
+
+/*ELEMENTS*/
 
 body {
 background-color: #fff;
