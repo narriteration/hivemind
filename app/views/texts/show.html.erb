@@ -6,34 +6,18 @@
           <div class="hero-heading form-centered">
 
             <p id="notice"><%= notice %></p>
-            <p><%= "'Hey I'm feeling #{@text.emotion} and I need #{@text.need}. Can #{@text.who} #{@text.action} #{@text.timeframe}?'" %></p>
-            <br>
-            <br>
+
+            <div class="text-preview">
+              <h3><%= "'Hey I'm feeling #{@text.emotion} and I need #{@text.need}. Can #{@text.who} #{@text.action} #{@text.timeframe}?'" %></h3>
+              <br>
+              <br>
+            </div>
+
             <%= link_to "SEND!", trigger_path, :class => 'button button-primary' %>
             <br>
             <br>
 
-            <p><strong>Sent to:</strong>
-              <%= @contactObject.name %>
-              <%= @contactObject.phone %></p>
-
-            <p><strong>Emotion:</strong>
-              <%= @text.emotion %></p>
-
-            <p><strong>Need:</strong>
-              <%= @text.need %></p>
-
-            <p><strong>Who:</strong>
-              <%= @text.who %></p>
-
-            <p><strong>Action:</strong>
-              <%= @text.action %></p>
-
-            <p><strong>Timeframe:</strong>
-              <%= @text.timeframe %></p>
-
-            <%= link_to 'Edit', edit_text_path(@text) %> |
-            <%= link_to 'Back', texts_path %>
+            <%= link_to 'Edit Before Sending', edit_text_path(@text) %>
 
           </div>
         </div>
