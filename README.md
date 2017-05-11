@@ -14,7 +14,6 @@ Honor system; please leave the editing to me :)
 # Additional Planning
 
 ![Logo](app/assets/images/logo.png)
-![Initial ERD](app/assets/images/erd_original.jpg)
 ![Final ERD](app/assets/images/erd_final.jpg)
 ![Models](app/assets/images/models.jpg)
 
