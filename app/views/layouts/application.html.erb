@@ -23,7 +23,7 @@
         <% if current_user %>
           <li class="navbar-item"><%= link_to "Log Out", logout_path %></li>
           <li class="navbar-item"><%= link_to "Profile", pages_profile_path(@user) %></li>
-          <li class="navbar-item"><%= link_to "Build a text!", new_text_path %></li>
+          <li class="navbar-item"><%= link_to "Build a Text!", new_text_path %></li>
           <li class="navbar-item"><%= link_to "Add Contact!", contacts_new_path(@user) %></li>
           <li class="user-greeting">
             <% if current_user %>
