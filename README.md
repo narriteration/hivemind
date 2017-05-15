@@ -1,22 +1,24 @@
-## About Hivemind
+# About Hivemind
 
 A mental health and self-improvement app built for the web. Using best practices in healthy communication, Hivemind enables users to add contacts from their real-life support networks, build a well-worded request with our tool that helps each user figure out exactly what they are feeling and what they need in that moment, and then seamlessly send that request as a text message to their contact/s of choice. Users can track emotional trends and access additional resources to build healthy habits after generating data about themselves through the app.
 
-# Wireframes & User Stories
+#### [Explore the App!](https://sleepy-shore-29580.herokuapp.com/)
+
+## Wireframes & User Stories
 
 - [Wireframes](https://app.moqups.com/cmangold/QOGkiGIPCQ/view/page/ad64222d5?ui=0)
 *Honor system; please leave the editing to me* :)
 
 - User stories: ![User Story](app/assets/images/user_story.JPG)
 
-# Tech
+## Tech
 
 - Front-end: Skeleton
 - Back-end: Ruby on Rails
 - Auth: bcrypt
 - SMS: Twilio
 
-# Wishlist / Future Development Plans
+## Wishlist / Future Development Plans
 
 ### Forms
 - Modify form fields in "new text" form so that user has option to fill empty text field with custom data, or to choose from a selection (dropdown)
@@ -31,7 +33,7 @@ A mental health and self-improvement app built for the web. Using best practices
 - Add group tags to find and select multiple contacts for group messaging
 - Administrator auth
 
-# Additional Information
+## Additional Information
 
 ![Logo](app/assets/images/logo.png)
 ![Final ERD](app/assets/images/erd_final.jpg)
@@ -41,7 +43,7 @@ A mental health and self-improvement app built for the web. Using best practices
 ![Shoutouts](app/assets/images/shoutouts.jpg)
 ![Future Plans](app/assets/images/future_plans.jpg)
 
-# Built by Chelsea Mangold
+## Built by Chelsea Mangold
 
 - https://twitter.com/narriteration
 - https://github.com/narriteration
